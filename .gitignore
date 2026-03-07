@@ -1,0 +1,15 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+.test-gemini.ts 
+.test-models.ts
+test-gemini.ts
+test-models.ts
+src/v3algoritham.md
+reddit.txt.txt
+pb_data/

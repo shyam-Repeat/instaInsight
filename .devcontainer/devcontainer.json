@@ -1,0 +1,26 @@
+{
+    "name": "InstaInsight Codespace",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "ms-python.python",
+                "ms-python.vscode-pylint",
+                "ms-vscode.live-server"
+            ]
+        }
+    },
+    "forwardPorts": [
+        3000,
+        5173,
+        8090
+    ],
+    "postCreateCommand": "npm install && python3 -m pip install --break-system-packages -r requirements.txt && python3 -m playwright install --with-deps chromium && python3 -m patchright install chromium && scrapling install",
+    "postStartCommand": "python3 -m pip install --break-system-packages -r requirements.txt",
+    "remoteUser": "node"
+}
